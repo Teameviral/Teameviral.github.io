@@ -5,6 +5,25 @@
   <title>Tecosys</title>
   <link rel="stylesheet" href="style.css">
   <script src="validation.js"></script>
+  <style>
+      /* Your CSS code goes here */
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightgray;
+        padding: 10px 20px;
+      }
+      .menu-item {
+        cursor: pointer;
+        color: navy;
+        text-decoration: none;
+        margin-right: 10px;
+      }
+      .page-content {
+        padding: 20px;
+      }
+  </style>
 </head>
 <body>
   <header>
@@ -17,6 +36,17 @@
   </nav>
   <button id="menu-toggle">Menu</button>
 </header>
+<header class="menu">
+      <h1>Tecosys</h1>
+      <nav>
+        <a class="menu-item" href="#about">About</a>
+        <a class="menu-item" href="#services">Services</a>
+        <a class="menu-item" href="#contact">Contact</a>
+        <?php if (is_logged_in()): ?>
+          <a class="menu-item" href="#add-service">Add Service</a>
+        <?php endif; ?>
+      </nav>
+  </header>
   <main>
     <section id="about">
       <h2>About Tecosys</h2>
