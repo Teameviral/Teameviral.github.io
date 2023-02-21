@@ -13,20 +13,28 @@
 </head>
   
 <body>
-<!-- partial:index.partial.html -->
-<body>
-  <!-- navbar header -->\
-  <div class="nav-header">
+  <div class="wrapper">
+    <div class="toggle">
+      <input class="toggle-input" type="checkbox" />
+      <div class="toggle-bg"></div>
+      <div class="toggle-switch">
+        <div class="toggle-switch-figure"></div>
+        <div class="toggle-switch-figureAlt"></div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav-header">
     <div class="nav-brand">
       <img src="./css/images/logo.gif">
     </div>
-  
+
     <!-- Add new button element for mobile menu toggle -->
     <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
       <span class="sr-only">Toggle navigation</span>
       <i class="fa fa-bars"></i>
     </button>
-  
+
     <div class="header-links">
       <ul>
         <li data-menuanchor="fourthPage"><a href="#" target="blank">RETURN</a></li>
@@ -36,21 +44,20 @@
         <li data-menuanchor="firstpage"><a href="#home">HOME</a></li>
       </ul>
     </div>
-  </div>
-  
-  <!-- Add new mobile menu container -->
-  <div class="nav-mobile">
-    <select class="mobile-menu" onchange="location = this.value;">
-      <option value="">Menu</option>
-      <option value="#home">Home</option>
-      <option value="#about">About</option>
-      <option value="#portfolio">Portfolio</option>
-      <option value="#contact">Contact</option>
-    </select>
-  </div>
-
-  <!-- end navbar header -->
+    
+    <!-- Add new mobile menu container -->
+    <div class="nav-mobile">
+      <select class="mobile-menu" onchange="location = this.value;">
+        <option value="">Menu</option>
+        <option value="#home">Home</option>
+        <option value="#about">About</option>
+        <option value="#portfolio">Portfolio</option>
+        <option value="#contact">Contact</option>
+      </select>
+    </div>
+  </nav>
 </body>
+
 
 
   <!-- begin fullpage -->
