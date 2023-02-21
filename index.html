@@ -15,18 +15,18 @@
 <body>
 <!-- partial:index.partial.html -->
 <body>
-  <!-- navbar header -->\
+  <!-- navbar header -->
   <div class="nav-header">
     <div class="nav-brand">
       <img src="./css/images/logo.gif">
     </div>
-  
+
     <!-- Add new button element for mobile menu toggle -->
     <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
       <span class="sr-only">Toggle navigation</span>
       <i class="fa fa-bars"></i>
     </button>
-  
+
     <div class="header-links">
       <ul>
         <li data-menuanchor="fourthPage"><a href="#" target="blank">RETURN</a></li>
@@ -37,50 +37,34 @@
       </ul>
     </div>
   </div>
-  
-
-    
-    <i class="fa fa-bars fa-3x"></i>
-    <div class="header-links">
-      <ul>
-        <li data-menuanchor="fourthPage"><a href="#" target="blank">RETURN</a></li>
-        <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
-        <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
-        <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
-        <li data-menuanchor="firstpage"><a href="#home">HOME</a></li>
-    </div>
-    
-  </div>
-  <!-- end navbar header -->
 
   <!-- Add new mobile menu container -->
- <div class="nav-mobile">
-   <ul class="main-menu">
-     <li data-menuanchor="firstpage"><a href="#home">HOME</a></li>
-     <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
-     <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
-     <li data-menuanchor="fourthPage"><a href="#" target="blank">RETURN</a></li>
-     <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
-   </ul>
- </div>
-
-
-  <!-- sidebar slider -->
-  <div class="nav-screen">
-    <i class="fa fa-times fa-3x"></i>
-    <div class="nav-container">
-      <div class="nav-links">
-        <ul id='myMenu'>
-          <li data-menuanchor="fourthPage"><a href="#" target="blank">RETURN</a></li>
-          <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
-          <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
-          <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
-          <li data-menuanchor="firstpage"><a href="#index.html">HOME</a></li>
-        </ul>
-      </div>
-    </div>
+  <div class="nav-mobile">
+    <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <i class="fa fa-bars"></i>
+    </button>
+    <ul class="main-menu">
+      <li data-menuanchor="firstpage"><a href="#home">HOME</a></li>
+      <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+      <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
+      <li data-menuanchor="fourthPage"><a href="#" target="blank">RETURN</a></li>
+      <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
+    </ul>
   </div>
-  <!-- end navbar slider -->
+
+  <!-- end navbar header -->
+
+  <!-- Add JavaScript code to toggle the mobile menu -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMobile = document.querySelector('.nav-mobile');
+
+    menuToggle.addEventListener('click', () => {
+      navMobile.classList.toggle('active');
+    });
+  </script>
+</body>
 
   <!-- begin fullpage -->
 
