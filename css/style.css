@@ -87,6 +87,35 @@ p {
   width: 50px;
 }
 
+/* Add CSS to hide mobile menu by default */
+.nav-mobile {
+  display: none;
+}
+
+/* Add CSS to show mobile menu when toggle button is clicked */
+.menu-toggle {
+  display: block;
+  float: right;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.menu-toggle i {
+  font-size: 2rem;
+}
+
+/* Use media queries to show/hide mobile menu */
+@media screen and (max-width: 768px) {
+  .header-links {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+}
+
+
 .fa-bars {
   display: none !important;
   color: #ff6363;

@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" >
-  <head>
-    <meta charset="UTF-8">
-    <title>Tecosys</title>
-    <meta name="description" content="Tecosys is a dynamic technology company providing innovative solutions to businesses of all sizes. Our team offers services including software development, web design, mobile app development, cloud computing, and cybersecurity. We empower businesses with the latest technology to streamline operations, improve efficiency, and drive growth. Contact us today to learn more.">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Tecosys</title>
+  <meta name="description" content="Tecosys is a dynamic technology company providing innovative solutions to businesses of all sizes. Our team offers services including software development, web design, mobile app development, cloud computing, and cybersecurity. We empower businesses with the latest technology to streamline operations, improve efficiency, and drive growth. Contact us today to learn more.">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
   
 <body>
 <!-- partial:index.partial.html -->
 <body>
-  <!-- navbar header -->
+  <!-- navbar header -->\
   <div class="nav-header">
     <div class="nav-brand">
       <img src="./css/images/logo.gif">
     </div>
+  
+    <!-- Add new button element for mobile menu toggle -->
+    <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <i class="fa fa-bars"></i>
+    </button>
+  
+    <div class="header-links">
+      <ul>
+        <li data-menuanchor="fourthPage"><a href="#" target="blank">RETURN</a></li>
+        <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
+        <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
+        <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+        <li data-menuanchor="firstpage"><a href="#home">HOME</a></li>
+      </ul>
+    </div>
+  </div>
+  
 
     
     <i class="fa fa-bars fa-3x"></i>
@@ -34,6 +52,18 @@
     
   </div>
   <!-- end navbar header -->
+
+  <!-- Add new mobile menu container -->
+ <div class="nav-mobile">
+   <ul class="main-menu">
+     <li data-menuanchor="firstpage"><a href="#home">HOME</a></li>
+     <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+     <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
+     <li data-menuanchor="fourthPage"><a href="#" target="blank">RETURN</a></li>
+     <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
+   </ul>
+ </div>
+
 
   <!-- sidebar slider -->
   <div class="nav-screen">
