@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Chatbot</title>
+	<script src="https://cdn.jsdelivr.net/npm/@openai/chatbot@1.0.0/dist/index.min.js"></script>
+</head>
+<body>
+	<h1>Welcome to my chatbot!</h1>
+	<div id="chatbot-container"></div>
+
+	<script>
+		const chatbot = new OpenAIChatbot({
+			containerElement: document.getElementById('chatbot-container'),
+			secretApiKey: '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',
+			model: 'davinci',
+			placeholders: {
+				action: 'Type your message here...',
+				next: 'Type your next message here...'
+			}
+		});
+	</script>
+</body>
+</html>
