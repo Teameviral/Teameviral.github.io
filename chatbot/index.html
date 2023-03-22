@@ -7,15 +7,37 @@
 <body>
 	<h1>Welcome to my chatbot!</h1>
 	<div id="chatbot-container"></div>
-
+	<input type="text" id="chatbot-input">
+	<button id="chatbot-submit">Send</button>
+	
 	<script>
+		const containerElement = document.getElementById('chatbot-container');
+		const chatbotInput = document.getElementById('chatbot-input');
+		const chatbotSubmit = document.getElementById('chatbot-submit');
 		const chatbot = new OpenAIChatbot({
-			containerElement: document.getElementById('chatbot-container'),
+			containerElement: containerElement,
 			secretApiKey: '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',
 			model: 'davinci',
 			placeholders: {
 				action: 'Type your message here...',
 				next: 'Type your next message here...'
+			}
+		});
+
+		chatbotSubmit.addEventListener('click', () => {
+			const inputText = chatbotInput.value;
+			if (inputText) {
+				chatbot.send(inputText).then(() => {
+					chatbotInput.value = '';
+					containerElement.scrollTop = containerElement.scrollHeight;
+				});
+			}
+		});
+
+		chatbotInput.addEventListener('keydown', (event) => {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				chatbotSubmit.click();
 			}
 		});
 	</script>
